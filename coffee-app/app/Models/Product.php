@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'currency',
+        'display_image_url',
+        'category_id',
+    ];
+
 
     public const DEFAULT_CURRENCY = 'VNĐ';
 
