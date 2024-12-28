@@ -28,3 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::delete('/profile', [App\Http\Controllers\ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/api-tokens', [App\Http\Controllers\ApiTokenManagerController::class, 'index'])->name('apiTokens.index');
